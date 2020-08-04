@@ -26,10 +26,12 @@ void NumericBox::buttonPressed(string buttonId) {
 }
 
 void NumericBox::draw(Graphics &g, int x, int y, size_t z) {
-    Control::draw(g,x,y,z);
-    value.draw(g,value.getLeft(),value.getTop(),z);
-    addButton.draw(g,addButton.getLeft(),addButton.getTop(),z);
-    subtractButton.draw(g,subtractButton.getLeft(),subtractButton.getTop(),z);
+    if (z == 0) {
+        Control::draw(g,x,y,z);
+        value.draw(g,value.getLeft(),value.getTop(),z);
+        addButton.draw(g,addButton.getLeft(),addButton.getTop(),z);
+        subtractButton.draw(g,subtractButton.getLeft(),subtractButton.getTop(),z);
+    }
 }
 
 void NumericBox::mousePressed(int x, int y, bool isLeft) {
