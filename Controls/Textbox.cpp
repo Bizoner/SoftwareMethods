@@ -54,9 +54,8 @@ void Textbox::keyDown(int keyCode, char character) {
 void Textbox::draw(Graphics& g, int x, int y, size_t z){
     if (z == 0) {
         Label::draw(g, x, y, z);
-    } else {
-        g.moveTo(cursor.X, cursor.Y);
-        g.setCursorVisibility(true);
     }
+    g.moveTo(cursor.X, cursor.Y);
+    g.setCursorVisibility(true);
 }
 

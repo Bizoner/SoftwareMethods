@@ -14,6 +14,7 @@ class Checklist : public Control, public ButtonListener {
         bool canGetFocus(){ return true; }
         bool addSelectedItem(string item);
         bool removeSelectedItem(string item);
+        vector<string> getSelectedItems() {return selectedItems;};
     protected:
         int currentOption;
         vector<string> selectedItems;
