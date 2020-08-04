@@ -10,7 +10,6 @@ class Checklist : public Control, public ButtonListener {
         void draw(Graphics& g, int x, int y, size_t z);
         void buttonPressed(string buttonId) {}
         void keyDown(int keyCode, char character);
-        void setFocus(Control& control);
         bool canGetFocus(){ return true; }
         bool addSelectedItem(string item);
         bool removeSelectedItem(string item);

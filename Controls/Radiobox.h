@@ -12,6 +12,7 @@ class Radiobox : public Control {
         void setFocus(Control& control);
         bool canGetFocus(){ return true; }
         bool selectItem(int item);
+        string getSelectedItem() {return selectedItem;};
         bool clearItem();
     protected:
         int currentOption = -1;
